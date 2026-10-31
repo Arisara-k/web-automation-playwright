@@ -1,0 +1,14 @@
+{
+  "targetProduct": {
+    "name": "Sauce Labs Backpack",
+    "slug": "sauce-labs-backpack",
+    "price": "$29.99",
+    "cartCountAfterAdd": "1"
+  },
+  "sortOptions": {
+    "nameAsc": "az",
+    "nameDesc": "za",
+    "priceAsc": "lohi",
+    "priceDesc": "hilo"
+  }
+}
