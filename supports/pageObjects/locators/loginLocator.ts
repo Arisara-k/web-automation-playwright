@@ -1,19 +1,9 @@
-import type { Locator, Page } from "@playwright/test";
+import { BaseLocator } from "@index";
 
 /**
  * LoginLocator - Contains all element selectors for the Login page
  */
-export class LoginLocator {
-  private readonly page: Page;
-
-  constructor(page: Page) {
-    this.page = page;
-  }
-
-  private getByTestId(testId: string): Locator {
-    return this.page.getByTestId(testId);
-  }
-
+export class LoginLocator extends BaseLocator {
   // Section: Form Elements
   get form() {
     return {

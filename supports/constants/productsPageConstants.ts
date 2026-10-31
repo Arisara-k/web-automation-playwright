@@ -4,5 +4,6 @@
  */
 export const PRODUCTS_PAGE_EXPECTED = {
   txtTitle: "Products",
+  urlInventory: "/inventory.html",
   urlCart: "/cart.html"
 } as const;

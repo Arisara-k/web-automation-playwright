@@ -5,6 +5,12 @@
     "price": "$29.99",
     "cartCountAfterAdd": "1"
   },
+  "secondProduct": {
+    "name": "Sauce Labs Bike Light",
+    "slug": "sauce-labs-bike-light",
+    "price": "$9.99"
+  },
+  "defaultItemQuantity": "1",
   "sortOptions": {
     "nameAsc": "az",
     "nameDesc": "za",

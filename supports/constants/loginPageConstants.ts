@@ -3,7 +3,6 @@
  * Declare as `as const` to preserve strict literal types.
  */
 export const LOGIN_PAGE_EXPECTED = {
-  urlInventory: "/inventory.html",
   txtErrorUsernameRequired: "Epic sadface: Username is required",
   txtErrorPasswordRequired: "Epic sadface: Password is required",
   txtErrorInvalidCredentials: "Epic sadface: Username and password do not match any user in this service",
