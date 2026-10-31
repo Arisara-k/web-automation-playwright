@@ -1,0 +1,33 @@
+{
+  "name": "web-automation-playwright",
+  "version": "1.0.0",
+  "description": "E2E test automation framework for SauceDemo using Playwright and TypeScript, structured with Page Object Model (POM) and automated via GitHub Actions CI/CD.",
+  "main": "index.js",
+  "scripts": {
+    "format": "npx @biomejs/biome format --write",
+    "typecheck": "tsc --noEmit",
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:headed": "npx playwright test --headed",
+    "test:smoke": "npx playwright test --grep \"@smoke\"",
+    "test:regression": "npx playwright test --grep \"(@regression|@smoke)\" --grep-invert \"@low\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arisara-k/web-automation-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Arisara-k/web-automation-playwright/issues"
+  },
+  "homepage": "https://github.com/Arisara-k/web-automation-playwright#readme",
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.4",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "typescript": "^5.7.0"
+  }
+}
