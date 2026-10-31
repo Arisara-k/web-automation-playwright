@@ -7,5 +7,5 @@ export const BASE_URL = ENV.BASE_URL || "https://www.saucedemo.com";
 // Storage state paths for authenticated sessions
 export const STANDARD_USER_AUTH = ".auth/user/standardUser.json";
 
-// Re-export page expected constants (uncomment as you create them)
-// export { LOGIN_EXPECTED } from "@constants/loginPageConstants";
+// Re-export page expected constants
+export { LOGIN_PAGE_EXPECTED } from "@constants/loginPageConstants";

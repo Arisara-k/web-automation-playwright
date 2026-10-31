@@ -6,11 +6,11 @@ export { BasePage } from "@pageObjects/base/BasePage";
 // Components (uncomment as you create them)
 // export { HeaderComponent } from "@pageObjects/components/headerComponent";
 
-// Locators (uncomment as you create them)
-// export { LoginLocator } from "@pageObjects/locators/loginLocator";
+// Locators
+export { LoginLocator } from "@pageObjects/locators/loginLocator";
 
-// Pages (uncomment as you create them)
-// export { LoginPage } from "@pageObjects/pages/loginPage";
+// Pages
+export { LoginPage } from "@pageObjects/pages/loginPage";
 
 // Utils (uncomment as you create them)
 // export { onDataUtils } from "@utils/dataUtils";
