@@ -1,30 +1,15 @@
 import test from "@playwright/test";
 
-// Base Page
+export { BaseLocator } from "@pageObjects/base/BaseLocator";
 export { BasePage } from "@pageObjects/base/BasePage";
-
-// Components (uncomment as you create them)
-// export { HeaderComponent } from "@pageObjects/components/headerComponent";
-
-// Locators
+export { HeaderComponent } from "@pageObjects/components/headerComponent";
+export { CartLocator } from "@pageObjects/locators/cartLocator";
 export { LoginLocator } from "@pageObjects/locators/loginLocator";
 export { ProductsLocator } from "@pageObjects/locators/productsLocator";
-
-// Pages
+export { CartPage } from "@pageObjects/pages/cartPage";
 export { LoginPage } from "@pageObjects/pages/loginPage";
 export { ProductsPage } from "@pageObjects/pages/productsPage";
 
-// Utils (uncomment as you create them)
-// export { onDataUtils } from "@utils/dataUtils";
-
-/**
- * Decorator function for wrapping Page Object Model methods in Playwright test.step.
- *
- * Supports:
- * - Default step name from method: `@step()`
- * - Custom static step name: `@step("Search records")`
- * - Dynamic parameter step name: `@step((...args) => `Fill username with: ${args[0]}`)`
- */
 export function step(stepName?: string | ((...args: any[]) => string)) {
   // biome-ignore lint/complexity/noBannedTypes: generic decorator must accept any method shape
   return function decorator(target: Function, context: ClassMethodDecoratorContext) {

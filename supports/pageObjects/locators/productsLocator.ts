@@ -1,26 +1,15 @@
-import type { Locator, Page } from "@playwright/test";
+import { BaseLocator } from "@index";
+import type { Locator } from "@playwright/test";
 
 /**
  * ProductsLocator - Contains all element selectors for the Products (Inventory) page
  */
-export class ProductsLocator {
-  private readonly page: Page;
-
-  constructor(page: Page) {
-    this.page = page;
-  }
-
-  private getByTestId(testId: string): Locator {
-    return this.page.getByTestId(testId);
-  }
-
+export class ProductsLocator extends BaseLocator {
   // Section: Header
   get header() {
     return {
       title: this.getByTestId("title"),
-      sortDropdown: this.getByTestId("product-sort-container"),
-      cartIcon: this.getByTestId("shopping-cart-link"),
-      cartBadge: this.getByTestId("shopping-cart-badge")
+      sortDropdown: this.getByTestId("product-sort-container")
     };
   }
 

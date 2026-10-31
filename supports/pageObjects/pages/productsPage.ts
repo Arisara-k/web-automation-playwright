@@ -1,5 +1,5 @@
 import { BASE_URL, PRODUCTS_PAGE_EXPECTED } from "@globalVariable";
-import { BasePage, ProductsLocator, step } from "@index";
+import { BasePage, HeaderComponent, ProductsLocator, step } from "@index";
 import { expect, type Page } from "@playwright/test";
 
 /**
@@ -7,10 +7,12 @@ import { expect, type Page } from "@playwright/test";
  */
 export class ProductsPage extends BasePage {
   readonly locators: ProductsLocator;
+  readonly header: HeaderComponent;
 
   constructor(page: Page) {
     super(page);
     this.locators = new ProductsLocator(page);
+    this.header = new HeaderComponent(page);
   }
 
   private async getNumericPrices(): Promise<number[]> {
@@ -39,7 +41,7 @@ export class ProductsPage extends BasePage {
 
   @step("Click shopping cart icon")
   async clickCartIcon(): Promise<void> {
-    await this.clickAndWait(this.locators.header.cartIcon);
+    await this.clickAndWait(this.header.cartIcon);
   }
 
   // Verifications (Named verify* - No raw expect in specs)
@@ -49,7 +51,7 @@ export class ProductsPage extends BasePage {
       expect(this.locators.header.title).toBeVisible(),
       expect(this.locators.header.title).toHaveText(PRODUCTS_PAGE_EXPECTED.txtTitle),
       expect(this.locators.header.sortDropdown).toBeVisible(),
-      expect(this.locators.header.cartIcon).toBeVisible(),
+      expect(this.header.cartIcon).toBeVisible(),
       expect(this.locators.list.items.first()).toBeVisible()
     ]);
   }
@@ -58,7 +60,7 @@ export class ProductsPage extends BasePage {
   async verifyItemInCart(productSlug: string, expectedBadgeCount: string): Promise<void> {
     await Promise.all([
       expect(this.locators.removeFromCartButton(productSlug)).toBeVisible(),
-      expect(this.locators.header.cartBadge).toHaveText(expectedBadgeCount)
+      expect(this.header.cartBadge).toHaveText(expectedBadgeCount)
     ]);
   }
 
@@ -66,7 +68,7 @@ export class ProductsPage extends BasePage {
   async verifyItemNotInCart(productSlug: string): Promise<void> {
     await Promise.all([
       expect(this.locators.addToCartButton(productSlug)).toBeVisible(),
-      expect(this.locators.header.cartBadge).toBeHidden()
+      expect(this.header.cartBadge).toBeHidden()
     ]);
   }
 

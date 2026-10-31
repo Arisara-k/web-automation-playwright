@@ -1,4 +1,4 @@
-import { BASE_URL, LOGIN_PAGE_EXPECTED } from "@globalVariable";
+import { BASE_URL, PRODUCTS_PAGE_EXPECTED } from "@globalVariable";
 import { BasePage, LoginLocator, step } from "@index";
 import { expect, type Page } from "@playwright/test";
 
@@ -58,7 +58,7 @@ export class LoginPage extends BasePage {
 
   @step("Verify login succeeded and navigated to the inventory page")
   async verifyLoginSuccess(): Promise<void> {
-    await this.verifyUrl(`${BASE_URL}${LOGIN_PAGE_EXPECTED.urlInventory}`);
+    await this.verifyUrl(`${BASE_URL}${PRODUCTS_PAGE_EXPECTED.urlInventory}`);
   }
 
   @step((...args) => `Verify error message is "${args[0]}"`)

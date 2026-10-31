@@ -12,13 +12,6 @@ export abstract class BasePage {
   }
 
   /**
-   * Get element by test id using Playwright's getByTestId (mapped to data-test attribute)
-   */
-  protected getByTestId(testId: string): Locator {
-    return this.page.getByTestId(testId);
-  }
-
-  /**
    * Click element and optionally wait for network idle navigation
    */
   protected async clickAndWait(locator: Locator, waitForNavigation = false): Promise<void> {
