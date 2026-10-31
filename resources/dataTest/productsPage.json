@@ -3,7 +3,8 @@
     "name": "Sauce Labs Backpack",
     "slug": "sauce-labs-backpack",
     "price": "$29.99",
-    "cartCountAfterAdd": "1"
+    "cartCountAfterAdd": "1",
+    "description": "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."
   },
   "secondProduct": {
     "name": "Sauce Labs Bike Light",

@@ -4,9 +4,15 @@ export { BaseLocator } from "@pageObjects/base/BaseLocator";
 export { BasePage } from "@pageObjects/base/BasePage";
 export { HeaderComponent } from "@pageObjects/components/headerComponent";
 export { CartLocator } from "@pageObjects/locators/cartLocator";
+export { CheckoutCompleteLocator } from "@pageObjects/locators/checkoutCompleteLocator";
+export { CheckoutInfoLocator } from "@pageObjects/locators/checkoutInfoLocator";
+export { CheckoutOverviewLocator } from "@pageObjects/locators/checkoutOverviewLocator";
 export { LoginLocator } from "@pageObjects/locators/loginLocator";
 export { ProductsLocator } from "@pageObjects/locators/productsLocator";
 export { CartPage } from "@pageObjects/pages/cartPage";
+export { CheckoutCompletePage } from "@pageObjects/pages/checkoutCompletePage";
+export { CheckoutInfoPage } from "@pageObjects/pages/checkoutInfoPage";
+export { CheckoutOverviewPage } from "@pageObjects/pages/checkoutOverviewPage";
 export { LoginPage } from "@pageObjects/pages/loginPage";
 export { ProductsPage } from "@pageObjects/pages/productsPage";
 
