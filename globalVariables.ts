@@ -9,3 +9,4 @@ export const STANDARD_USER_AUTH = ".auth/user/standardUser.json";
 
 // Re-export page expected constants
 export { LOGIN_PAGE_EXPECTED } from "@constants/loginPageConstants";
+export { PRODUCTS_PAGE_EXPECTED } from "@constants/productsPageConstants";

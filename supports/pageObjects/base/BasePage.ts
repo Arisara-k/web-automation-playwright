@@ -12,14 +12,6 @@ export abstract class BasePage {
   }
 
   /**
-   * Wait for page to load completely (network idle)
-   */
-  @step("Wait for page to load completely")
-  async waitForPageLoad(): Promise<void> {
-    await this.page.waitForLoadState("networkidle");
-  }
-
-  /**
    * Get element by test id using Playwright's getByTestId (mapped to data-test attribute)
    */
   protected getByTestId(testId: string): Locator {

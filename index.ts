@@ -8,9 +8,11 @@ export { BasePage } from "@pageObjects/base/BasePage";
 
 // Locators
 export { LoginLocator } from "@pageObjects/locators/loginLocator";
+export { ProductsLocator } from "@pageObjects/locators/productsLocator";
 
 // Pages
 export { LoginPage } from "@pageObjects/pages/loginPage";
+export { ProductsPage } from "@pageObjects/pages/productsPage";
 
 // Utils (uncomment as you create them)
 // export { onDataUtils } from "@utils/dataUtils";
