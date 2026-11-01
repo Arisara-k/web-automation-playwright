@@ -7,8 +7,7 @@
       "@index": ["./index.ts"],
       "@pageObjects/*": ["./supports/pageObjects/*"],
       "@constants/*": ["./supports/constants/*"],
-      "@resources/*": ["./resources/*"],
-      "@utils/*": ["./supports/utils/*"]
+      "@resources/*": ["./resources/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
